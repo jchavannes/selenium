@@ -1275,6 +1275,10 @@ type remoteWE struct {
 	id string
 }
 
+func (elem *remoteWE) Uuid() string {
+	return elem.id
+}
+
 func (elem *remoteWE) Click() error {
 	urlTemplate := fmt.Sprintf("/session/%%s/element/%s/click", elem.id)
 	return elem.parent.voidCommand(urlTemplate, nil)

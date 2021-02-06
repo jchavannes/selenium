@@ -371,6 +371,8 @@ type WebDriver interface {
 
 // WebElement defines method supported by web elements.
 type WebElement interface {
+	// Uuid returns internal element id
+	Uuid() string
 	// Click clicks on the element.
 	Click() error
 	// SendKeys types into the element.
